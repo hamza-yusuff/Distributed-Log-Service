@@ -1,6 +1,6 @@
 # Distributed-Services
 
-This project is essentially a result of my attempt to understand the concepts of Distributed Sytems, and implement them
+This project is essentially a result of my attempt to understand the concepts of Distributed Systems, and implement them
 with Golang to consequently build a fully-fletched distributed service. Since, the learning curve itself is madly steep, I have separated the project developement in the stages listed below. However, the main aim is to build
 a distributed service with it's very own storage handling, networking over a client and server, and a way to
 distribute the server instances. At the end, if possible, I plan to deploy the service with Kubernetes to the cloud.
@@ -17,10 +17,10 @@ Finally, the stages are as follows :
   - Setup protobufs, and ways to aumatically generate the data structures based on the protobuf message structures
   - Building a commit log library that will essentially be the log for the entire service, to store and lookup data
     - The commit log library has the following structure:
-        - A Component that allows appending and reading records from the log by provisioning independent structures and methods to faciliate
+        - A component that allows appending and reading records from the log by provisioning independent structures and methods to faciliate the following
           - Store file handling for record entries
           - Index file handling for index entries of the corresponding records
-        - A Component that combines the store and file handling components to provision a Segment file handling module to coordinate operations across store and index files.
+        - A component that combines the store and file handling components to provision a Segment file handling module to coordinate operations across store and index files.
         - Lasty, the final component ties all the components above, specially the Segment module, to create the final Log handling package for the entire libaray.
     - All the files for the log library can be found under the internal/log directory.
    
