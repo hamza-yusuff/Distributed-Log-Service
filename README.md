@@ -9,7 +9,7 @@ At this point in time ( 8th Janauary 2022), the first step has been successfully
 expected to be completed by the end of January.
 
 The stages were decided in this order to reflect the content structure of the book Distributed Services with Go, written by Travis Jeffery.
-As the book proceeds with the concepts, I have tried to simultaneously learn and build the different components of the service alongside.
+As the book proceeds with the concepts, I have tried to independently and simultaneously learn and build the different components of the service.
 Finally, the stages are as follows :
 
  ### Building the project's storage layer, a web server to faciliate JSON over HTTP, and a custom made log libray
