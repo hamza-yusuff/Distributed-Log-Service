@@ -17,11 +17,11 @@ Finally, the stages are as follows :
   - Setup protobufs, and ways to aumatically generate the data structures based on the protobuf message structures
   - Building a commit log library that will essentially be the log for the entire service, to store and lookup data
     - The commit log library has the following structure:
-        - A Component that allows appending and reading records from the log by provisioning indpendent structures and methods to faciliate
+        - A Component that allows appending and reading records from the log by provisioning independent structures and methods to faciliate
           - Store file handling for record entries
           - Index file handling for index entries of the corresponding records
-        - A Component that combines the store and file handling components to provision a Segment file handling module to coordinate operations across record and index files.
-        - Lasty, the final component ties all the components above, specially the Segment module, to create the final Log handling package for the enitre libaray.
+        - A Component that combines the store and file handling components to provision a Segment file handling module to coordinate operations across store and index files.
+        - Lasty, the final component ties all the components above, specially the Segment module, to create the final Log handling package for the entire libaray.
     - All the files for the log library can be found under the internal/log directory.
    
 ### Creating the service over a network
@@ -43,8 +43,8 @@ Finally, the stages are as follows :
 
 ## Disclaimer
 As stated above, the project is being built by closely following the content and concepts outlined in the book 
-Distributed Services with Go by Travis Jeffery. Hence, it's being developed purely for my own exploration and learning of distribued services.
-Howvever, anyone willing to contribue is welcomed.
+Distributed Services with Go by Travis Jeffery. Hence, it's being developed purely for my own exploration and learning about distribued services.
+Howvever, anyone willing to contribue is more than welcomed. Thanks!.
 
 ## Author
 Hamza Yusuff - Email: hbyusuff@uwaterloo.ca
