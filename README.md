@@ -1,4 +1,4 @@
-# Distributed Log Services
+# Distributed Log Service
 
 This project is essentially a result of my attempt to understand the concepts of Distributed Systems, and implement them
 with Golang, to consequently build a fully-fletched distributed log service. Since, the learning curve itself is madly steep and time-consuming, and understanding the concepts behind distributed service require some prior knowledge, I have separated the project developement in the stages listed below. However, the main aim is to build
