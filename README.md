@@ -13,6 +13,7 @@ As the book proceeds with the concepts, I have tried to independently and simult
 Finally, the stages are as follows :
 
  ### Building the project's storage layer, a web server to faciliate JSON over HTTP, and a custom made log libray
+
   - Develop the JSON over HTTP commit log service
   - Setup protobufs, and ways to aumatically generate the data structures based on the protobuf message structures
   - Building a commit log library that will essentially be the log for the entire service, to store and lookup data
@@ -50,6 +51,7 @@ The log has been made to go through a graceful shutdown for the service. Service
 The segment portion (segment.go) wraps the index struct (defined in the index.go file), and store types to coordinate operations across the store and index files. This is because every time a record gets added to the store file, the index file needs to be updated with the offset and position values. For reads, the segments needs to look for the index from the index file, and search for the record at that index from the store file. The index and store files
  are saved with names that correspond to their baseOffset number; for example - with baseOffset of 3, the index and store file would be 3.index and 3.store.  This naming convention gets handy when creating new segments in the segment.go file, as the baseOffset number for the index files and store files of a particular segment can be directly parsed from the file names. Also, if you are confused, by offset number of a record, I mean the the index of a record, for example is it the first record or second or third in the store file. By baseoffSet, I mean the offset number of the first record which was written into the record file. When the index and store files of a segment reaches the max size, new index and store files are created, and the files correspond to each other; i.e one cannot be created without the other , or their information sync exactly.
 
+![log](https://user-images.githubusercontent.com/63330003/148664852-7e1e4e2d-f54d-406c-96d7-245278085860.png)
 
 ## Development 
  The entire development of the project is dependent on my learning curve, and ability to grasp the concepts of distirbued services. Since, the 
