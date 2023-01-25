@@ -1,7 +1,7 @@
 # Distributed Log Service
 
 This project is essentially a result of my attempt to understand the concepts of Distributed Systems, and implement them
-with Golang, to consequently build a fully-fletched distributed log service. Since, the learning curve itself is madly steep and time-consuming, and understanding the concepts behind distributed service require some prior knowledge, I have separated the project developement in the stages listed below. However, the main aim is to build
+with Golang, to consequently build a fully-fletched distributed log service. Since, the learning curve itself is madly steep and time-consuming, and understanding the concepts behind distributed service require some prior knowledge; I have separated the project developement in the stages listed below. However, the main aim is to build
 a distributed service with it's very own storage handling, networking over a client and server, and a way to
 distribute the server instances. At the end, if possible, I plan to deploy the service with Kubernetes to the cloud.
 
@@ -60,8 +60,8 @@ The segment portion (segment.go) wraps the index struct (defined in the index.go
 
 ## Disclaimer
 As stated above, the project is being built by closely following the content and concepts outlined in the book 
-Distributed Services with Go by Travis Jeffery. Hence, it's being developed purely for my own exploration and learning about distribued services.
-Howvever, anyone willing to contribue is more than welcomed. Thanks!.
+Distributed Services with Go by Travis Jeffery. Hence, it's being developed purely for my own exploration and learning about distributed services.
+Howvever, anyone willing to contribue is more than welcome. Thanks!.
 
 ## Author
 Hamza Yusuff - Email: hbyusuff@uwaterloo.ca
